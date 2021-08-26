@@ -1,0 +1,38 @@
+class Swap
+{
+	public static void usingTemp(int i1,int i2)
+	{
+		int temp= i1;
+		i1= i2;
+		i2= temp;
+		System.out.println("i1= "+i1);
+		System.out.println("i2= "+i2);
+	}
+	
+	public static void usingAddSub(int i1, int i2)
+	{
+		i1=i1+i2;
+		i2=i1-i2;
+		i1=i1-i2;
+		System.out.println("i1= "+i1);
+		System.out.println("i2= "+i2);
+		
+	}
+	
+	public static void usingXOR(int i1, int i2)
+	{
+		i1=i1^i2;
+		i2=i1^i2;
+		i1=i1^i2;
+		System.out.println("i1= "+i1);
+		System.out.println("i2= "+i2);
+	}
+	public static void main(String[] args)
+	{
+		int i1= 10;
+		int i2= 20;
+		usingTemp(i1,i2);
+		usingAddSub(i1,i2);
+		usingXOR(i1,i2);
+	}
+}
